@@ -155,7 +155,6 @@ legend_labels = np.concatenate([
 ax.legend(legend_handle, legend_labels, loc=9, ncol=4, shadow=True, handletextpad=-2)
 
 plt.show()
-
 # %%
 # Finally, it is also possible to write custom classes that define
 # how to stylize legends.
@@ -167,7 +166,6 @@ class HandlerDashedLines(HandlerLineCollection):
     """
     def create_artists(self, legend, orig_handle,
                        xdescent, ydescent, width, height, fontsize, trans):
-        # figure out how many lines there are
         numlines = len(orig_handle.get_segments())
         xdata, xdata_marker = self.get_xdata(legend, xdescent, ydescent,
                                              width, height, fontsize)
